@@ -21,6 +21,11 @@ public class UserRestController {
         return repository.findAll();
     }
 
+    @RequestMapping(value = "/daj", method = RequestMethod.GET)
+    public String get() {
+        return "Evo ti";
+    }
+
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public User getUserById(@PathVariable("id") ObjectId id) {
         return repository.findBy_id(id);
